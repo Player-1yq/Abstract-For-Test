@@ -1,0 +1,54 @@
+#t_arvud=0
+#for i in range(15):
+#    arv = input("Sisesta arv: ")
+#    try:
+#        int_arv = int(arv)
+#        print(f"{arv} on täisav.")
+#        t_arvud+=1
+#    except ValueError:
+#       print(f"{arv} ei ole täisarv")
+#print(f"Sissestatud {t_arvud} täisarvu")
+
+
+#t_arvud=0
+#count = 0
+#while True:
+#    arv = input("Sisesta arv: ")
+#    try:
+#        int_arv = int(arv)
+#        print(f"{arv} on täisav.")
+#        t_arvud+=1
+#    except ValueError:
+#       print(f"{arv} ei ole täisarv")
+#    count += 1
+#    if count == 15: break
+
+#print(f"Sissestatud {t_arvud} täisarvu")
+
+#t_arvud=0
+#count = 0
+#while count <= 15:
+#    arv = input("Sisesta arv: ")
+#    try:
+#        int_arv = int(arv)
+#        print(f"{arv} on täisav.")
+#        t_arvud+=1
+#    except ValueError:
+#       print(f"{arv} ei ole täisarv")
+#    count += 1
+
+#print(f"Sissestatud {t_arvud} täisarvu")
+
+#count = 0
+#while True:
+#    try:
+#        a = int(input("Sisesta arv: "))
+#        if a > 0:
+#            print("Arv on naturaalne.")
+#            break
+#    except ValueError:
+#        print("Arv ei ole naturaalne")
+
+#for i in range(1,a + 1):
+#    summa += i 
+#print(f"Summa on {summa}")
