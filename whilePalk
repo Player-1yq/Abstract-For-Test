@@ -9,10 +9,6 @@ while 1:
     print("1. Lisage andmed: ")
     print("2. Suurim palk: ")
     print("3. Väiksem palk: ")
-    print("4. Otsida palga: ")
-    print("5. Piiratud palk: ")
-    print("6. Keskmine palk: ")
-    print("7. Sorteerida nime jargi: ")
 
     while True:
         try:
@@ -28,11 +24,30 @@ while 1:
        suurim_palk()
     if vastus==3:
         vaikseim_palk()
-    if vastus==4:
-        palga_otsing()
-    if vastus==5:
-        piiratud_palk()
-    if vastus==6:
-        keskmine_palk()
-    if vastus==7:
-        sorteeri_nime_jargi()
+
+
+
+import random
+import string
+
+def lisa_andmeid():
+    for i in range(3):
+        täht=input("Sisestage täht inemese")
+        palk=input("Sisestage listid täht", täht ,"ja", palk)
+        palk.append(palk)
+
+def suurim_palk(inimesed, palgad):
+    max_palk = max(palgad)
+    index = palgad.index(max_palk)
+    print("Suurim palk on:", max_palk)
+    print("Inimene kellel on suurim palk:", inimesed[index])
+    return inimesed[index], max_palk
+
+
+def vaikseim_palk(inimesed, palgad):
+    min_palk = min(palgad)
+    index = palgad.index(min_palk)
+    print("Väikseim palk on:", min_palk)
+    print("Inimene kellel on väikseim palk:", inimesed[index])
+    return inimesed[index], min_palk
+
