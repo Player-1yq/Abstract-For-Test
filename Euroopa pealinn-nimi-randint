@@ -1,0 +1,64 @@
+pealinnad = ["Tallinn", "Riia", "Vilnius", "Helsinki", "Stockholm",
+             "Oslo", "Kopenhaagen", "London", "Pariis", "Berliin"]
+
+for linn in pealinnad:
+    print(linn)
+
+pealinnad.sort()
+print("Sorteeritud:", pealinnad)
+
+uus1 = input("Lisa uus pealinn: ")
+uus2 = input("Lisa teine pealinn: ")
+pealinnad.append(uus1)
+pealinnad.append(uus2)
+pealinnad.sort()
+
+for i in range(len(pealinnad)):
+    print(i+1, "-", pealinnad[i])
+
+print(f"Meie loendis on {len(pealinnad)}", "Euroopa pealinna.")
+
+
+#nimi
+#nimi = input("Sisesta oma nimi: ")
+
+#if nimi.isalpha():
+#    nimi = nimi.capitalize()
+#    print(f"Tere, {nimi}!")
+#    tähed = len(nimi)
+#    täishäälikud = sum(1 for t in nimi.lower() if t in 'aeiouõäöü')
+#    kaashäälikud = tähed - täishäälikud
+#    print(f"Tähed:", tähed, "Täishäälikud:", täishäälikud, "Kaashäälikud:", kaashäälikud)
+#    print(f"Tähed tähestikus:", ''.join(sorted(set(nimi.lower()))))
+#else:
+#    print(f"Nimi võib sisaldada ainult tähti!")
+
+
+
+#random.randint
+#import random
+
+#loend = []
+#for i in range(10):
+#    loend.append(random.randint(1, 100))
+
+#print(f"Algne loend: {loend}")
+
+#min_index = 0
+#max_index = 0
+#for i in range(len(loend)):
+#    if loend[i] < loend[min_index]:
+#        min_index = i
+#    if loend[i] > loend[max_index]:
+#        max_index = i
+
+#loend[min_index], loend[max_index] = loend[max_index], loend[min_index]
+#print(f"Pärast min-max vahetust: {loend}")
+
+
+#import random
+
+#vastused = ["Jah, kindlasti!", "Jah!", "Võib-olla!", "Ei!"]
+#küsimus = input("Küsi midagi: ")
+
+#print(f"Vastus: {random.choice(vastused)}")
