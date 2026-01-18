@@ -1,0 +1,77 @@
+from random import *
+
+def vahetus(a,b): #vajab a,b
+    abi=a
+    a=b
+    b=abi
+    return a,b
+
+def generaator(n,loend,a,b):
+    for i in range (n):
+        loend.append(randint(a,b))
+
+
+def jagamine(loend:list,p:list,n,nol):
+    for el in loend:
+        if el>0:
+            p.append(el)
+        elif el<0:
+            n.append(el)
+        else:
+            nol.append(el)
+
+def keskmine(loend):
+    n=len(loend)
+    if n==0:
+        kesk=0
+    else:
+        sum=0
+        for i in loend:
+            sum+=i
+        kesk=round(sum/n,2)
+    return kesk
+
+def lisamine(loend,el):
+    loend.append(el)
+    loend.sort()
+
+
+
+from random import *
+from module1 import*
+
+
+def arvud_loendis():
+
+print("Andmed:")
+n=abs(int(input("Mitu täisarvu genereerime loendisse? => ")))
+mini=int(input("Sisesta vahemiku minimaalne arv => "))
+maxi=int(input("Sisesta vahemiku maksimaalne arv => "))
+if mini>=maxi:
+    mini,maxi =vahetus(mini,maxi)
+
+    s=[]
+    pos=[]
+    neg=[]
+    null=[]
+    generaator(n,s,mini,maxi)
+    print()
+    print("Tulemused:")
+    print("Saadud loend alates",mini,"kuni",maxi,s)
+    s.sort()
+    print("Sorteeritud loend",s)
+    jagamine(s,pos,neg,null)
+    print("Positiivsete elementide loend",pos)
+    print("Negatiivsete elementide loend",neg)
+    print("Null-elementide loend",null)
+    kesk=keskmine(pos)
+    lisamine(s,kesk)
+    print("Positiivsete keskmine:",kesk)
+    kesk=keskmine(neg)
+    lisamine(s,kesk)
+    print("Negatiivsete keskmine:",kesk)
+    print("Lisame keskmised algsesse massiivi:")
+    s.sort()
+    print(s)
+   
+arvud_loendis()
