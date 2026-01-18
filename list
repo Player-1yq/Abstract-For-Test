@@ -1,0 +1,69 @@
+# import string
+# m=string.punctuation
+# t=['a', 'e', 'i', 'o', 'u', 'õ', 'ä', 'ö', 'ü']
+# k=['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 'š', 'z', 'ž', 't', 'v', 'w', 'x', 'y']
+# täis_arv=0
+# kaas_arv=0
+# märkude_arv=0
+# sõne=input("Sisesta sõna või lause: ").lower()
+# for täht in sõne:
+#     if täht in t:
+#         täis_arv+=1
+#     elif täht in k:
+#         kaas_arv+=1
+#     elif täht in m or täht== " ":
+#         märkude_arv+=1
+# print(f"Sõnes/lauses on {täis_arv} täishäälikut")
+# print(f"{kaas_arv} kaashäälikut ja ")
+# print(f"{märkude_arv} märki (sh tühikud) ")
+
+from random import randint
+
+
+# nimelist=[]
+# for i in range(5):
+#     nimi=input("Sisesta nimi: ").capitalize()
+#     nimelist.append(nimi)
+# print(f"Alguses list on {nimelist}")
+
+# for i in range(5):
+#     print(f"{nimelist[i]}")
+
+# for i in range(5):
+#     print(f"{nimi}")
+
+# nimelist.sort()
+# print(f"Sorteeritud list on {nimelist}")
+# print(f"Viimsena sisestatud {nimi}")
+# soov=input("Kas tahad nimesid muuda: ").lower()
+# if soov=="jah":
+#     vana_nimi=input("Sisesta vana nimi: ").capitalize()
+#     uus_nimi=input("Sisesta uus nimi: ").capitalize()
+#     if vana_nimi in nimelist:
+#         ind=nimelist.index(vana_nimi)
+#         nimelist[ind]==uus_nimi
+# print(f"uus nimelist on {nimelist}")
+
+# mitu=0
+# ühekodselt_nimed=[]
+
+# for nime  in nimelist:
+#     mitu=nimelist.count(nime)
+#     ühekodselt_nimed.append(nime)
+#     for i in range(mitu):
+#         nimelist.remove(nime)
+#     print(nimelist)
+#     print(ühekodselt_nimed)
+# print(f"Nimelist ilma kordusteta on {ühekodselt_nimed}")
+
+# unikalsed_nimed=list(set(nimelist))
+
+vanused=[]
+mitu=randint(5, 15)
+for i in range(mitu):
+    vanus=randint(1, 100)
+    vanused.append(vanus)
+    print(f"Vanused: {vanused}")
+    print(f"Suurim vanus on: {max(vanus)}")
+    print(f"Väikseim vanus on: {min(vanus)}")
+    print(f"vanusde summa on: {sum(vanus)}")
