@@ -1,0 +1,72 @@
+def summa(arv1: float, arv2: float) -> float:
+    """tagastab kahe arvu summa.
+    :parem float arv1: Esimene arv
+    :parem float arv2: Teine arv
+    ;return float: Arvude summa
+    """
+    s=arv1+arv2
+    return s
+
+def int_kontroll(sisend:str) -> int:
+    """Sisestatud tekst teisendab ujukomaarvuks
+    Kui sisestatud tähed, siis palub uuesti sisestada.
+    :parem str sisend: Sisestatud tekst
+    :return float: Tesendatud ukukumaarv
+    """
+    while True:
+        try:
+            arv=int(sisend)
+            return arv
+        except ValueError:
+            sisend=input("Sisesta palun arvutamiseks sobiv arv: ")
+
+def float_kontroll(sisend:str) -> float:
+    """Sisestatud tekst teisendab ujukomaarvuks
+    Kui sisestatud tähed, siis palub uuesti sisestada.
+    :parem str sisend: Sisestatud tekst
+    :return float: Tesendatud ukukumaarv
+    """
+    while True:
+        try:
+            arv=float(sisend)
+            return arv
+        except ValueError:
+            sisend=input("Sisesta palun arvutamiseks sobiv arv: ")
+
+def arithmetic(a:float, b:float, tehe:str)->any:
+    """Teed kahe arvu vahel soovitud tehte.
+    :parem float a: Esimene arv
+    :parem float b: Teine arv
+    :parem str tehe; tehte liik (+, -, *, /, **)
+    :return any: Tehte tulemus
+    """
+    if tehe in ["+", "-", "*", "/", "**"]:
+        if tehe=="/" and b==0:
+            vastus="DIV/0"
+        else:
+            vastus=eval(f"{a}{tehe}{b}")
+    else:
+        vastus="Tundmatu tehe"
+    return vastus
+
+def is_year_leap(aasta:int)->bool:
+    """Kontrollib, kas antud aasta on liigaasta.
+    :parem int aasta: Kontrollib aasta
+    :parem bool: True kui liigaasta, False  kui tavaline aasta
+    """
+    if aasta % 4 == 0:
+        return True
+    else:
+        return False
+
+def square(küljepikkus:float)->any:
+    """Arvutab ruudu pindala, ümbermõõt ja diagonaal
+    :parem float küljepikkus: Ruudu küljepikkus
+    :return float: Ruudu pindala
+    :return float: Ruudu ümbermõõt
+    :return float: RUudu diagonaal
+    """
+    pindala=küljepikkus**2
+    ümbermõõt=4*küljepikkus
+    diagonaal=küljepikkus*2**0.5
+    return pindala, ümbermõõt, diagonaal
