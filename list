@@ -67,3 +67,13 @@ for i in range(mitu):
     print(f"Suurim vanus on: {max(vanus)}")
     print(f"Väikseim vanus on: {min(vanus)}")
     print(f"vanusde summa on: {sum(vanus)}")
+
+
+
+append() | добавляет элемент
+remove() | удаляет
+pop()    | удаляет и вернуть
+sort()   | сортировка листа
+max()    | максимум
+min()    | минимум
+sum()    | сумма
