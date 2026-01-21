@@ -52,3 +52,11 @@
 #for i in range(1,a + 1):
 #    summa += i 
 #print(f"Summa on {summa}")
+
+
+
+
+while      | повторяет код
+while True | бесконечный цикл
+break      | выйти из цикла
+continue   | пропустить шаг
