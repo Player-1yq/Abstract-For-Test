@@ -51,3 +51,8 @@ def vaikseim_palk(inimesed, palgad):
     print("Inimene kellel on väikseim palk:", inimesed[index])
     return inimesed[index], min_palk
 
+
+def         | создаёт функцию                  
+lisa_andmeid()  | должна добавлять людей и зарплаты
+suurim_palk()   | ищет самую большую зарплату      
+vaikseim_palk() | ищет самую маленькую зарплату    
