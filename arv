@@ -70,3 +70,13 @@ def square(küljepikkus:float)->any:
     ümbermõõt=4*küljepikkus
     diagonaal=küljepikkus*2**0.5
     return pindala, ümbermõõt, diagonaal
+
+#count
+nums = [1, 2, 2, 3, 2]
+count = 0
+
+for n in nums:
+    if n == 2:
+        count += 1
+
+print(count)
