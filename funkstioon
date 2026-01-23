@@ -32,3 +32,51 @@ def date(day, month, year):
     if day > max_days:
         return False
     return True
+
+a=10
+
+nimi = "Silver"
+vanus = int(input("sisesta enda vanus"))
+if vanus > 18:
+    print(f"{nimi} on täiskasvanud")
+if vanus < 18:
+    print(f"{nimi} on alaealine")
+else:
+
+# for i in range():
+
+# int(input())
+
+# if vanus > 18:
+    #print(f"{nimi} on täiskasvanud")
+
+ with open("TextFileSilver.txt", "w") as f:
+    f.write("tere")
+f = open("TextFileSilver.txt","r")
+print(f.read())
+f.close()
+
+with open("TextFileSilver.txt","r") as f:
+    for rida in f:
+        print(rida.strip())
+
+
+#if tehe in["+","-","*","/"]:
+
+print("1.Tekst\n2.Kalkulaator\n3.Ruudu kujund")
+
+menüü_valik = input("Mis valiku teed(1, 2, 3): ")
+if menüü_valik == "1":
+    print("Viin teksti")
+elif menüü_valik == "2":
+    print("Viin kalkulaatorisse")
+elif menüü_valik == "3":
+    print("Viin ruudu kujundisse")
+
+
+märk = input("Mis märki kastutad(+,-,*,/,ruutvõrrand): ")
+
+valik1 = int(input("Vali esimene arv: "))
+valik2 = int(input("Vali teine arv: "))
+
+  
