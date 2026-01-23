@@ -76,9 +76,9 @@ elif menüü_valik == "3":
 
 def calculator():
     try:
-        a = float(input("Введи первое число: "))
-        b = float(input("Введи второе число: "))
-        op = input("Выбери операцию (+, -, *, /): ")
+        a = float(input("Sisestage esimene arv: "))
+        b = float(input("Sisestage teiner arv: "))
+        op = input("vailge  (+, -, *, /): ")
 
         if op == "+":
             result = a + b
@@ -91,17 +91,17 @@ def calculator():
                 raise ZeroDivisionError
             result = a / b
         else:
-            print("Неизвестная операция")
+            print("Tundmatu operatsioon")
             return
 
-        print("Результат:", result)
+        print("tulemus:", result)
 
     except ValueError:
-        print("Ошибка: нужно вводить числа")
+        print("Viga: peate sisestama numbrid")
     except ZeroDivisionError:
-        print("Ошибка: деление на ноль")
+        print("Viga: jagamine nulliga")
     except Exception as e:
-        print("Другая ошибка:", e)
+        print("Teine viga:", e)
 
 
 calculator()
