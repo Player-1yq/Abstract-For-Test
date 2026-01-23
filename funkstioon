@@ -74,9 +74,36 @@ elif menüü_valik == "3":
     print("Viin ruudu kujundisse")
 
 
-märk = input("Mis märki kastutad(+,-,*,/,ruutvõrrand): ")
+def calculator():
+    try:
+        a = float(input("Введи первое число: "))
+        b = float(input("Введи второе число: "))
+        op = input("Выбери операцию (+, -, *, /): ")
 
-valik1 = int(input("Vali esimene arv: "))
-valik2 = int(input("Vali teine arv: "))
+        if op == "+":
+            result = a + b
+        elif op == "-":
+            result = a - b
+        elif op == "*":
+            result = a * b
+        elif op == "/":
+            if b == 0:
+                raise ZeroDivisionError
+            result = a / b
+        else:
+            print("Неизвестная операция")
+            return
+
+        print("Результат:", result)
+
+    except ValueError:
+        print("Ошибка: нужно вводить числа")
+    except ZeroDivisionError:
+        print("Ошибка: деление на ноль")
+    except Exception as e:
+        print("Другая ошибка:", e)
+
+
+calculator()
 
   
