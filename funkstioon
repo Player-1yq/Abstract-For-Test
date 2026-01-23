@@ -106,4 +106,11 @@ def calculator():
 
 calculator()
 
-  
+
+def square():
+    try:
+        size = int(input("Sisestage ruudu suurus: "))
+        for i in range(size):
+            print("* " * size)
+    except ValueError:
+        print("Viga: peate sisestama täisarvu")
